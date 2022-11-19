@@ -1,18 +1,21 @@
 package org.example;
 
+import org.example.model.Owner;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Properties;
 
 public class Main {
+
+    private static final String DATABASE_NAME = "test";
     public static void main(String[] args) {
         try {
             Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost/test?user=postgres&password=alamakota123&ssl=false");
-            String createDB = "CREATE TABLE IF NOT EXISTS OWNER (\n" +
+ /*           String createDB = "CREATE TABLE IF NOT EXISTS OWNER (\n" +
                     "    ID SERIAL PRIMARY KEY,\n" +
                     "    FIRSTNAME CHARACTER VARYING(255) NOT NULL,\n" +
                     "    LASTNAME CHARACTER VARYING(255) NOT NULL,\n" +
@@ -25,7 +28,7 @@ public class Main {
                     "SET FIRSTNAME = 'Alan', LASTNAME = 'Nowak', EMAIL = 'alan.nowak@gmail.com'\n" +
                     "WHERE id = 3";
             String deleteValue = "DELETE FROM OWNER\n" +
-                    "WHERE ID = 5";
+                    "WHERE ID = 5";*/
             String selectAll = "SELECT * FROM OWNER";
             Statement statement = connection.createStatement();
             //statement.execute(createDB);
@@ -44,7 +47,7 @@ public class Main {
                 String email = resultSet.getString("EMAIL");
                 owners.add(new Owner(id,firstname,lastname,email));
             }
-
+            resultSet.close();
             owners.forEach(owner -> System.out.println(owner));
 
 
