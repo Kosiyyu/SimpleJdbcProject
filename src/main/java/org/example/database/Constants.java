@@ -11,6 +11,7 @@ public class Constants {
     public static final String DATABASE_SSL = "false";
 
     //OWNER
+    public static final String OWNER_TABLE_NAME = "OWNER";
     public static final String OWNER_ID = "OWNER_ID";
     public static final String OWNER_FIRSTNAME = "OWNER_FIRSTNAME";
     public static final String OWNER_LASTNAME = "OWNER_LASTNAME";

@@ -53,7 +53,7 @@ public class Database {
         return resultSet;
     }
 
-    public boolean checkDatabaseConnection(Connection connection){
+    public boolean checkDatabaseConnection(){
         //returns true if database connection exists and false if it doesn't
         try {
             return connection.isClosed() || connection != null;
