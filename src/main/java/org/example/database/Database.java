@@ -7,6 +7,7 @@ public class Database {
     private Connection connection = null;
 
     public Database() {
+
     }
 
     public Connection connectToDatabase(){
@@ -14,8 +15,8 @@ public class Database {
         try{
             connection = DriverManager.getConnection(DatabaseUrl);
         }
-        catch (SQLException sqlException){
-            return connection;
+        catch (Exception e){
+            System.out.println(e.getMessage());
         }
         return connection;
     }
@@ -24,21 +25,21 @@ public class Database {
         try {
             connection.close();
         }
-        catch (SQLException e) {
-            throw new RuntimeException(e);
+        catch (Exception e) {
+            System.out.println(e.getMessage());
         }
         return connection;
     }
 
     public Statement createAndExecuteStatement(String sqlCode){
         Statement statement = null;
-        try {
-            statement = connection.createStatement();
-            statement.execute(sqlCode);
-        }
-        catch (SQLException e) {
-
-        }
+            try {
+                statement = connection.createStatement();
+                statement.execute(sqlCode);
+            }
+            catch (Exception e) {
+                System.out.println("createAndExecuteStatement(): " + e.getMessage());
+            }
         return statement;
     }
 
@@ -46,8 +47,9 @@ public class Database {
         try {
             statement.close();
             statement.cancel();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
+        }
+        catch (Exception e) {
+            System.out.println("closeAndCancelStatement(Statement statement): " + e.getMessage());
         }
         return statement;
     }
@@ -55,8 +57,9 @@ public class Database {
     public ResultSet closeResultSet(ResultSet resultSet){
         try {
             resultSet.close();
-        } catch (SQLException e) {
-
+        }
+        catch (Exception e) {
+            System.out.println("closeResultSet(ResultSet resultSet): " + e.getMessage());
         }
         return resultSet;
     }
@@ -66,8 +69,8 @@ public class Database {
         try {
             resultSet = statement.getResultSet();
         }
-        catch (SQLException e) {
-            throw new RuntimeException(e);
+        catch (Exception e) {
+            System.out.println("handleQuery(Statement statement): " + e.getMessage());
         }
         return resultSet;
     }
@@ -75,12 +78,13 @@ public class Database {
     public boolean checkDatabaseConnection(){
         //returns true if database connection exists and false if it doesn't
         try {
-            System.out.println("Statement is: " + (connection.isClosed() || connection != null));
+            System.out.println("Connection is: " + (connection.isClosed() || connection != null));
             return connection.isClosed() || connection != null;
         }
-        catch (SQLException sqlException){
-            return false;
+        catch (Exception e){
+            System.out.println("checkDatabaseConnection(): " + e.getMessage());
         }
+        return false;
     }
 
     public boolean checkStatement(Statement statement){
@@ -88,9 +92,10 @@ public class Database {
             System.out.println("Statement is: " + (statement.isClosed() || statement != null));
             return statement.isClosed() || statement != null;
         }
-        catch (SQLException sqlException){
-            return false;
+        catch (Exception e){
+            System.out.println(e.getMessage());
         }
+        return false;
     }
 
     public boolean checkResultSet(ResultSet resultSet){
@@ -98,8 +103,9 @@ public class Database {
             System.out.println("ResultSet is: " + (resultSet.isClosed() || resultSet != null));
             return resultSet.isClosed() || resultSet != null;
         }
-        catch (SQLException sqlException){
-            return false;
+        catch (Exception e){
+            System.out.println(e.getMessage());
         }
+        return false;
     }
 }
