@@ -37,6 +37,59 @@ public class OwnerRepository {
         return owner;
     }
 
+    public Owner getOwnerById(int searchedId){
+        Owner owner = null;
+        if(database.checkDatabaseConnection()) {
+            String sqlCode = "SELECT * FROM " + Constants.OWNER_TABLE_NAME + " WHERE " + Constants.OWNER_ID + " = " + searchedId;
+            Statement statement = database.createAndExecuteStatement(sqlCode);
+            if(database.checkStatement(statement)){
+                ResultSet resultSet = database.handleQuery(statement);
+                if(database.checkResultSet(resultSet)){
+                    try{
+                        while(resultSet.next()){
+                            int id = resultSet.getInt(Constants.OWNER_ID);
+                            String firstname = resultSet.getString(Constants.OWNER_FIRSTNAME);
+                            String lastname = resultSet.getString(Constants.OWNER_LASTNAME);
+                            String email = resultSet.getString(Constants.OWNER_EMAIL);
+                            owner = new Owner(id, firstname, lastname, email);
+                        }
+                    }catch (Exception e){
+
+                    }
+                    database.closeResultSet(resultSet);
+                }
+                database.closeAndCancelStatement(statement);
+            }
+        }
+        return owner;
+    }
+
+    public void deleteOwnerById(int searchedId){
+        Owner owner = null;
+        if(database.checkDatabaseConnection()) {
+            String sqlCode = "DELETE FROM " + Constants.OWNER_TABLE_NAME + " WHERE " + Constants.OWNER_ID + " = " + searchedId;
+            Statement statement = database.createAndExecuteStatement(sqlCode);
+            if(database.checkStatement(statement)){
+                database.closeAndCancelStatement(statement);
+            }
+        }
+    }
+
+    public void updateOwnerById(int searchedId, String firstname, String lastname, String email){
+        Owner owner = null;
+        if(database.checkDatabaseConnection()) {
+            String sqlCode = "UPDATE " + Constants.OWNER_TABLE_NAME +" \n" +
+                    "SET " + Constants.OWNER_FIRSTNAME + " = '" + firstname + "', " + Constants.OWNER_LASTNAME + " = '" + lastname + "', " + Constants.OWNER_EMAIL + " = '" + email + "'\n" +
+                    "WHERE " + Constants.OWNER_ID + " = " + searchedId;
+            Statement statement = database.createAndExecuteStatement(sqlCode);
+            if(database.checkStatement(statement)){
+                database.closeAndCancelStatement(statement);
+            }
+        }
+    }
+
+
+
     public List<Owner> getAllOwners(){
         List<Owner> owners = new ArrayList<>();
         if(database.checkDatabaseConnection()){

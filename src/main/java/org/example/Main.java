@@ -26,6 +26,9 @@ public class Main {
 
         System.out.println(ownerRepository.getAllOwners());
         System.out.println(ownerRepository.getAllOwnersSortedById());
+        System.out.println(ownerRepository.getOwnerById(100));
+        ownerRepository.deleteOwnerById(14);
+        ownerRepository.updateOwnerById(7,"AAA", "AAA", "AAA");
 
     }
 }
