@@ -75,6 +75,7 @@ public class Database {
     public boolean checkDatabaseConnection(){
         //returns true if database connection exists and false if it doesn't
         try {
+            System.out.println("Statement is: " + (connection.isClosed() || connection != null));
             return connection.isClosed() || connection != null;
         }
         catch (SQLException sqlException){
@@ -84,7 +85,7 @@ public class Database {
 
     public boolean checkStatement(Statement statement){
         try {
-            System.out.println(statement.isClosed() || statement != null);
+            System.out.println("Statement is: " + (statement.isClosed() || statement != null));
             return statement.isClosed() || statement != null;
         }
         catch (SQLException sqlException){
@@ -94,6 +95,7 @@ public class Database {
 
     public boolean checkResultSet(ResultSet resultSet){
         try {
+            System.out.println("ResultSet is: " + (resultSet.isClosed() || resultSet != null));
             return resultSet.isClosed() || resultSet != null;
         }
         catch (SQLException sqlException){
