@@ -12,8 +12,7 @@ public class Owner {
     public Owner() {
     }
 
-    public Owner(int id, String firstname, String lastname, String email) {
-        this.id = id;
+    public Owner(String firstname, String lastname, String email) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.email = email;

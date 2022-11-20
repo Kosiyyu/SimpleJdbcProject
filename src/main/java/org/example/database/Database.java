@@ -37,9 +37,28 @@ public class Database {
             statement.execute(sqlCode);
         }
         catch (SQLException e) {
+
+        }
+        return statement;
+    }
+
+    public Statement closeAndCancelStatement(Statement statement){
+        try {
+            statement.close();
+            statement.cancel();
+        } catch (SQLException e) {
             throw new RuntimeException(e);
         }
         return statement;
+    }
+
+    public ResultSet closeResultSet(ResultSet resultSet){
+        try {
+            resultSet.close();
+        } catch (SQLException e) {
+
+        }
+        return resultSet;
     }
 
     public ResultSet handleQuery(Statement statement){
@@ -57,6 +76,25 @@ public class Database {
         //returns true if database connection exists and false if it doesn't
         try {
             return connection.isClosed() || connection != null;
+        }
+        catch (SQLException sqlException){
+            return false;
+        }
+    }
+
+    public boolean checkStatement(Statement statement){
+        try {
+            System.out.println(statement.isClosed() || statement != null);
+            return statement.isClosed() || statement != null;
+        }
+        catch (SQLException sqlException){
+            return false;
+        }
+    }
+
+    public boolean checkResultSet(ResultSet resultSet){
+        try {
+            return resultSet.isClosed() || resultSet != null;
         }
         catch (SQLException sqlException){
             return false;
