@@ -12,10 +12,10 @@ public class Constants {
 
     //OWNER
     public static final String OWNER_TABLE_NAME = "OWNER";
-    public static final String OWNER_ID = "OWNER_ID";
-    public static final String OWNER_FIRSTNAME = "OWNER_FIRSTNAME";
-    public static final String OWNER_LASTNAME = "OWNER_LASTNAME";
-    public static final String OWNER_EMAIL = "OWNER_EMAIL";
+    public static final String OWNER_ID = "ID";
+    public static final String OWNER_FIRSTNAME = "FIRSTNAME";
+    public static final String OWNER_LASTNAME = "LASTNAME";
+    public static final String OWNER_EMAIL = "EMAIL";
     public static final String[] OWNER_TABLE_MODEL = {OWNER_ID, OWNER_FIRSTNAME, OWNER_LASTNAME, OWNER_EMAIL};
 
 }
