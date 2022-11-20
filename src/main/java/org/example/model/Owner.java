@@ -18,6 +18,13 @@ public class Owner {
         this.email = email;
     }
 
+    public Owner(int id, String firstname, String lastname, String email) {
+        this.id = id;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.email = email;
+    }
+
     @Override
     public String toString() {
         return

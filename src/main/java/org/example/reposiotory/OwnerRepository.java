@@ -7,10 +7,12 @@ import org.example.model.Owner;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class OwnerRepository {
-    Database database = null;
+    private Database database = null;
 
     public OwnerRepository(Database database) {
         this.database = database;
@@ -49,7 +51,7 @@ public class OwnerRepository {
                             String firstname = resultSet.getString(Constants.OWNER_FIRSTNAME);
                             String lastname = resultSet.getString(Constants.OWNER_LASTNAME);
                             String email = resultSet.getString(Constants.OWNER_EMAIL);
-                            owners.add(new Owner(firstname,lastname,email));
+                            owners.add(new Owner(id, firstname,lastname,email));
                         }
                     }catch (Exception e){
 
@@ -60,6 +62,41 @@ public class OwnerRepository {
             }
         }
         return owners;
+    }
+
+    public List<Owner> getAllOwnersSortedById(){
+        return getAllOwners()
+                .stream()
+                .sorted(Comparator.comparing(Owner::getId))
+                .collect(Collectors.toList());
+    }
+
+    public List<Owner> getAllOwnersSortedByFirstname(){
+        return getAllOwners()
+                .stream()
+                .sorted(Comparator.comparing(Owner::getFirstname))
+                .collect(Collectors.toList());
+    }
+
+    public List<Owner> getAllOwnersSortedByLastname(){
+        return getAllOwners()
+                .stream()
+                .sorted(Comparator.comparing(Owner::getLastname))
+                .collect(Collectors.toList());
+    }
+
+    public List<Owner> getAllOwnersSortedByFirstnameReversed(){
+        return getAllOwners()
+                .stream()
+                .sorted(Comparator.comparing(Owner::getFirstname).reversed())
+                .collect(Collectors.toList());
+    }
+
+    public List<Owner> getAllOwnersSortedByLastnameReversed(){
+        return getAllOwners()
+                .stream()
+                .sorted(Comparator.comparing(Owner::getLastname).reversed())
+                .collect(Collectors.toList());
     }
 
 }
