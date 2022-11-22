@@ -1,8 +1,11 @@
 package org.example.view;
 
+import lombok.Data;
+
 import javax.swing.*;
 
-public class MainView {
+@Data
+public class OwnerView {
     private JPanel rootPanel;
     private JTextField firstnameTextField;
     private JTextField lastnameTextField;
