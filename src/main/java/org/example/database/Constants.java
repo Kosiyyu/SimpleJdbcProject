@@ -1,7 +1,6 @@
 package org.example.database;
 
 public class Constants {
-
     //DATABASE
     public static final String DATABASE_NAME = "test";
     public static final String DATABASE_TYPE = "postgresql";

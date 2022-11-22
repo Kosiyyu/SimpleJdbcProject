@@ -14,6 +14,7 @@ import java.util.stream.Collectors;
 public class OwnerRepository {
     private Database database = null;
 
+
     public OwnerRepository(Database database) {
         this.database = database;
     }

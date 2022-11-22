@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.swing.*;
 
+
 @Data
 public class OwnerView {
     private JPanel rootPanel;

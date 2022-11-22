@@ -84,6 +84,7 @@ public class Database {
         catch (Exception e){
             System.out.println("checkDatabaseConnection(): " + e.getMessage());
         }
+
         return false;
     }
 

@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a484b762-1f81-431d-8b27-59911615f932" name="Changes" comment="Adding ui">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/OwnerController.java" afterDir="false" />
+    <list default="true" id="a484b762-1f81-431d-8b27-59911615f932" name="Changes" comment="Adding some stuff">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/view/MainView.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/view/OwnerView.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/view/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/view/OwnerView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +76,7 @@
       <workItem from="1668878917609" duration="18285000" />
       <workItem from="1668905786937" duration="703000" />
       <workItem from="1668934729533" duration="9774000" />
-      <workItem from="1669101795410" duration="3576000" />
+      <workItem from="1669101795410" duration="3785000" />
     </task>
     <task id="LOCAL-00001" summary="Adding project files">
       <created>1668879213906</created>
@@ -222,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669103065323</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Adding some stuff">
+      <created>1669105530804</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1669105530804</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,6 +263,7 @@
     <MESSAGE value="Fixing OwnerRepository" />
     <MESSAGE value="Adding more OwnerRepository methods" />
     <MESSAGE value="Adding ui" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding ui" />
+    <MESSAGE value="Adding some stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding some stuff" />
   </component>
 </project>

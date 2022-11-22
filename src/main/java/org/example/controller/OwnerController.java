@@ -14,6 +14,7 @@ public class OwnerController {
     private OwnerView ownerView;
 
     public OwnerController() {
+
     }
 
     public OwnerController(Owner owner, OwnerView ownerView) {
