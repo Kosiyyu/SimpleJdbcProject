@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a484b762-1f81-431d-8b27-59911615f932" name="Changes" comment="Adding more OwnerRepository methods">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/reposiotory/OwnerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/reposiotory/OwnerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/view/MainView.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/view/MainView.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/view/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/view/MainView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +76,7 @@
       <workItem from="1668878917609" duration="18285000" />
       <workItem from="1668905786937" duration="703000" />
       <workItem from="1668934729533" duration="9774000" />
+      <workItem from="1669101795410" duration="1210000" />
     </task>
     <task id="LOCAL-00001" summary="Adding project files">
       <created>1668879213906</created>
