@@ -6,6 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="a484b762-1f81-431d-8b27-59911615f932" name="Changes" comment="Adding some stuff">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/OwnerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/OwnerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/database/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/database/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/Owner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Owner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/view/OwnerView.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/view/OwnerView.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/view/OwnerView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/view/OwnerView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +83,7 @@
       <workItem from="1668905786937" duration="703000" />
       <workItem from="1668934729533" duration="9774000" />
       <workItem from="1669101795410" duration="3785000" />
+      <workItem from="1669140891657" duration="17208000" />
     </task>
     <task id="LOCAL-00001" summary="Adding project files">
       <created>1668879213906</created>
@@ -225,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669105530804</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Adding some stuff">
+      <created>1669141095114</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1669141095114</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -21,7 +21,7 @@ public class Database {
         return connection;
     }
 
-    public Connection disconnectFromDatabase(){
+    public Connection closeConnection(){
         try {
             connection.close();
         }

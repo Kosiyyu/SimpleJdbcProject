@@ -24,4 +24,5 @@ public class OwnerView {
     private JPanel inputPanel;
     private JPanel tablePanel;
     private JPanel buttonPanel;
+    private JLabel titleLabel;
 }

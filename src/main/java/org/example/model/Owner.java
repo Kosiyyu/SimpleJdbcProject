@@ -4,7 +4,7 @@ import lombok.Data;
 
 
 @Data
-public class Owner {
+public class Owner{
     int id;
     String firstname;
     String lastname;
